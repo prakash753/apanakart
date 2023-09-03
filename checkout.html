@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta http-equiv="X-UA-compatible" content="IE=edge">
+  <title>Delicious</title>
+
+  <link href="styles.css" rel="stylesheet">
+  <link href="checkout.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i,700,700i|Satisfy|Comic+Neue:300,300i,400,400i,700,700i" rel="stylesheet">
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <link href="icofont.min.css" rel="stylesheet">
+  <link href="boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <section id="checkout" class="checkout">
+        <div class="container">
+            <div class="section-title">
+              <h2>Check<span>out</span></h2>
+            </div>
+
+            <form class="checkout-form" method="POST">
+                <div class="info">
+
+                  <div class="offset-sm-2">
+                  <div class="form-group row">
+                    <label for="first-name" class="col-sm-4 col-form-label">
+                          First Name
+                    </label>
+                    <div class="col-sm-4">
+                        <input type="text" name="firstname" class="form-control" id="fname" oninput="validate_fname()"/>
+                    </div>
+                    <div id="e_fname" class="error col-sm-4"></div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="last-name" class="col-sm-4 col-form-label" >
+                          Last Name
+                    </label>
+                    <div class="col-sm-4">
+                        <input type="text" name="lastname" class="form-control" id="lname" oninput="validate_lname()"/>
+                    </div>
+                    <div id="e_lname" class="error col-sm-4"></div>
+                  </div>
+          
+                  <div class="form-group row">
+                    <label for="email" class="col-sm-4 col-form-label">
+                          Email address
+                    </label>
+                    <div class="col-sm-4">
+                        <input type="text" name="email" class="form-control" id="email" oninput="validate_mail()"/>
+                    </div>
+                    <div id="e_mail" class="error col-sm-4"></div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="phone" class="col-sm-4 col-form-label">
+                          Phone Number
+                    </label>
+                    <div class="col-sm-4">
+                        <input type="tel" name="phone" class="form-control" id="phone" oninput="validate_phone()"/>
+                    </div>
+                    <div id="e_phone" class="error col-sm-4"></div>
+                  </div>
+                </div>
+            </div>
+            <div class="address-info">
+                <div class="title offset-sm-2">
+                    <h2>Shipping Address</h2>
+                </div>
+                
+                <div class="offset-sm-2">
+                    <div class="form-group row">
+            
+                      <div class="col-sm-12">
+                        <label for="address" class="col-form-label">
+                              Address
+                        </label>
+                      </div>
+                      <div class="col-sm-9">
+                          <textarea name="address" class="form-control" id="address" value="" rows="2" oninput="validate_address()" spellcheck="false" required></textarea>
+                      </div>
+                      <div id="e_address" class="error col-sm-3"></div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="city" class="col-sm-4 col-form-label">
+                          City
+                        </label>
+                        <div class="col-sm-4">
+                        <select class="custom-select" name="city" id="city" oninput="validate_city()">
+                            <option value="">Choose..</option>
+                            <option value="BEngaluru">Bengaluru</option>
+                            <option value="Hyderabad">Hyderabad</option>
+							<option value="Chennai">Chennai</option>
+							<option value="Delhi">Delhi</option>
+							<option value="Mumbai">Mumbai</option>
+                        </select>
+                        </div>
+                        <div id="e_city" class="error col-sm-4"></div>
+                    </div>
+                    
+                    <div class="form-group row">
+                      <label for="" class="col-sm-4 col-form-label">
+                          Area
+                      </label>
+                      <div class="col-sm-4">
+                        <input type="text" name="area" class="form-control" id="area" oninput="validate_area()"/>
+                      </div> 
+                      <div id="e_area" class="error col-sm-4"></div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="zip" class="col-sm-4 col-form-label">
+                            Zip
+                        </label>
+                        <div class="col-sm-3">
+                            <input type="text" name="zip" class="form-control" id="zip" oninput="validate_zip()"/>
+                        </div>
+                        <div id="e_zip" class="error col-sm-4"></div>
+                    </div>
+
+
+
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="cash-on-delivery" oninput="red()"/>
+                        <label class="custom-control-label" for="cash-on-delivery">Cash On Delivery</label>
+                    </div> 
+                </div>
+                </div>
+
+                <div class="commit form-group">
+                    <div class="offset-sm-2 col-lg-6 col-12">
+                      <button type="button" id="place_order" class="btn btn-primary btn-block waves-effect waves-light" onclick="redirect();">Proceed to payment </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+<script> 
+function red(){
+if(document.getElementById("cash-on-delivery").checked == true)
+    document.getElementById('place_order').innerHTML = 'Place Order';
+else
+	document.getElementById('place_order').innerHTML = 'Proceed to payment';
+	}
+
+function redirect()
+{
+   if(document.getElementById("cash-on-delivery").checked == true)
+        window.location.href = 'ThankYou.html';
+   else window.location.href = 'paym.html';        
+}
+
+</script>
+</body>
+</html>

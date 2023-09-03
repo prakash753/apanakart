@@ -1,0 +1,430 @@
+/*-- ======= General ======= */
+body {
+  font-family: "Poppins", sans-serif;
+  color: #444444;
+}
+
+a {
+  color: #ffb03b;
+}
+
+a:hover {
+  color: #ffc56e;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Satisfy", sans-serif;
+  color:#ffb03b;
+}
+
+/*-- ======= Topbar ======= */
+#topbar {
+  padding: 0;
+  font-size: 15px;
+  height: 50px;
+  transition: all 0.5s;
+  background: rgba(26, 24, 22, 0.8);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#topbar.topbar-transparent {
+  background: transparent;
+}
+
+#topbar.topbar-scrolled {
+  top: -50px;
+}
+
+#topbar i {
+  color: #ffb03b;
+}
+
+#topbar i + i {
+  margin-left: 15px;
+}
+
+
+/*-- ======= Header ======= */
+#header {
+  top: 50px;
+  height: 70px;
+  z-index: 997;
+  transition: all 0.5s;
+  padding: 10px 0;
+  background: rgba(26, 24, 22, 0.85);
+}
+#header.header-transparent{
+	background:transparent;
+}
+
+#header.header-scrolled {
+  top: 0;
+  background: rgba(26, 24, 22, 0.85);
+}
+
+#header .logo h1 {
+  font-size: 28px;
+  margin: 0;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+
+@media(max-width: 767px){
+  #header .logo h1 {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+  }
+}
+
+#header .logo h1 a, #header .logo h1 a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+#header .login-icon{
+  position: fixed;
+  right: 55px;
+  top: 13px;
+  font-size: 16px;
+  display: inline-block;
+  background: #777064;
+  color: #fff;
+  line-height: 1;
+  padding: 9px 0 8px 0;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  text-decoration: none;
+}
+#header .change-icon{
+  position: fixed;
+  right: 55px;
+  top: 13px;
+  font-size: 20px;
+  display: inline-block;
+  background:#fff;
+  color: black;
+  line-height: 1;
+  padding: 6px 0 8px 0;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: 600;
+  width: 34px;
+  height: 34px;
+  text-decoration: none;
+}
+
+#header .change-icon-lg{
+  font-size: 22px;
+  display: inline-block;
+  background:#fff;
+  color: black;
+  line-height: 1;
+  padding: 7px 8px;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: 600;
+  width: 36px;
+  height: 36px;
+  margin-left: 10px;
+  text-decoration: none;
+}
+#header .dropdown-menu .dropdown-item{
+  color: black;
+}
+/*#header .dropdown-menu .dropdown-item:active, #header .dropdown-menu .dropdown-item:focus{
+  color: #fff;
+  background-color: #ffb03b;
+}*/
+@media (max-width: 992px) {
+  #header {
+    top: 0;
+    background: rgba(26, 24, 22, 0.85);
+  }
+}
+
+/*-- ======= Login Modal ======= */
+#loginModal .m-header h3, #signModal .m-header h3, #forgotPass .m-header h3{
+  font-family: "Bauer";
+  font-weight: 600;
+  color: black;
+  padding-top: 20px;
+  text-align: center; 
+}
+#loginModal .m-header .close, #signModal .m-header .close, #forgotPass .m-header .close{
+  outline: none;
+  font-size: 20px;
+  margin-right: 10px;
+}
+#loginModal .m-header .close:hover, #signModal .m-header .close:hover, #forgotPass .m-header .close{
+  color: black;
+}
+
+#loginModal .modal-content, #signModal .modal-content{
+  padding: 20px 10px; 
+  text-align: center; 
+}
+#forgotPass .modal-content{ 
+  padding: 20px 10px;
+}
+
+#loginModal .modal-content .form-group, #signModal .modal-content .form-group, #forgotPass .modal-content .form-group{
+  padding-top: 10px;
+}
+
+#loginModal .fpass a,#loginModal .sign-up a{
+  text-decoration: none;
+  color: slateblue;
+}
+
+#loginModal .fpass a:hover, #loginModal .sign-up a:hover{
+  color: navy;
+}
+#forgotPass .modal-body p{
+  font-size: 14px;
+  color: #838282;
+  padding-top: 10px;
+  margin-bottom: 0;
+}
+#forgotPass .modal-body .form-control{
+  border: 1px solid #f3c785;
+}
+#loginModal .modal-body .loginBtn, #signModal .modal-body .signup, #forgotPass .modal-body .PassBtn{
+  display: block;
+  border-radius: 25px;
+  border: 0;
+  overflow: hidden;
+  margin: 10px auto 40px auto;
+  padding: 10px 40px;
+  background-color: black;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 1.5px;
+  outline: none;
+  font-family: "Museo Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#forgotPass .modal-body .PassBtn{
+  border-radius: 0;
+  padding: 8px 40px;
+}
+#signModal .modal-body .signup{
+  margin: 20px auto;
+}
+
+.pop, .pop .logout:hover{
+  color:white;
+}
+/*-- ======= Modal Validations ======= */
+.modal .modal-content .signup:hover, .modal .modal-content .login:hover{
+  background-color: black;
+  color: #fff;
+  border-radius: 40px;
+}
+    
+.modal .modal-content form .error, .modal .error{
+  font-family: "Poppins", sans-serif;
+	color: red;
+  font-size: 11px;
+  text-align: left;
+  padding-top: 5px;
+}
+.modal .error{
+  text-align: center;
+}
+
+/*-- ======= Navigation Menu ======= */
+.nav-menu, .nav-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-menu > ul > li {
+  position: relative;
+  white-space: nowrap;
+  float: left;
+}
+
+.nav-menu a {
+  display: block;
+  position: relative;
+  color: white;
+  padding: 9px 15px;
+  transition: 0.3s;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+
+.nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
+  color: #ffb03b;
+  text-decoration: none;
+}
+
+/*-- ======= Navigation mobile ======= */
+.mobile-nav-toggle {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  z-index: 9998;
+  border: 0;
+  background: none;
+  font-size: 24px;
+  transition: all 0.4s;
+  line-height: 1;
+  text-align: right;
+  outline: none;
+}
+
+.mobile-nav-toggle i {
+  color: #fff;
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 55px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  z-index: 9999;
+  overflow-y: auto;
+  background: #fff;
+  transition: ease-in-out 0.2s;
+  visibility: hidden;
+  border-radius: 10px;
+  padding: 10px 0;
+}
+
+.mobile-nav * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mobile-nav a {
+  display: block;
+  position: relative;
+  color: #433f39;
+  padding: 10px 20px;
+  font-weight: 500;
+  outline: none;
+}
+.mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
+  color: #ffb03b;
+  text-decoration: none;
+}
+
+.mobile-nav-active {
+  overflow: hidden;
+}
+
+.mobile-nav-active .mobile-nav {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-nav-active .mobile-nav-toggle i {
+  color: #fff;
+}
+
+/*-- ======= Sections General ======= */
+section {
+  padding: 60px 0;
+}
+
+.section-bg {
+  background-color: white;
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  margin: 15px 0 0 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #5f5950;
+}
+
+.section-title h2 span {
+  color: #ffb03b;
+}
+
+.section-title p {
+  margin: 15px auto 0 auto;
+  font-weight: 300;
+}
+
+@media (min-width: 1024px) {
+  .section-title p {
+    width: 50%;
+  }
+}
+
+/*-- ======= footer ======= */
+
+#footer .footer-top{
+  background: #35322d;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  padding: 30px 0;
+  border-top: 3px solid #37332a;
+  border-bottom: 3px solid #28251f;
+  margin-top: 70px;
+}
+
+#footer .address {
+  font-size: 15;
+  font-style: italic;
+  padding: 0;
+}
+
+#footer .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #46423b;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+#footer h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffb03b;
+  position: relative;
+  padding: 0;
+  margin: 0 0 15px 0;
+}
+
+#footer p{
+  font-size: 20px;
+  font-style: italic;
+  color:white;
+}
+
+#footer .social-links a:hover{
+	background-color: #ffb03b;
+}
+
+#footer .copyright {
+  text-align: center;
+  padding-top: 10px;
+  background: black;
+  color: #fff;
+  border-bottom: 3px solid #28251f;
+  padding-bottom: 5px;
+}

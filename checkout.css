@@ -1,0 +1,49 @@
+.checkout{
+	background-color: #f9f9fb;
+	font-family: "Museo Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #a4a4a4;
+}
+
+.checkout .container{
+    background-color: #fff;
+	padding-top: 20px;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.5);
+    padding-bottom: 30px;
+}
+
+/*-- ======= checkout ======= */
+
+.checkout .title h2{
+	text-align: left;
+	color: #faa11b;
+	padding: 20px 0;
+	font-family: "Gill Sans";
+	font-size: 24px;
+	font-weight: 600;
+}
+.checkout .checkout-form{
+    padding-top: 50px;
+    border-top: 1px groove #fff;
+    margin-bottom: 60px;
+}
+.checkout form{
+    color: black;
+}
+.checkout .commit .col-sm-3{
+	padding-left: 0;
+}
+.checkout .section-body p{
+	padding: 10px 10px 0;
+}
+.checkout .commit{
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+.checkout form .error{
+	font-family: "Poppins", sans-serif;
+	color: red;
+	font-size: 13px;
+	align-self: center;
+}
