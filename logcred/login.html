@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <link rel="stylesheet" href="loginform.css">
+</head>
+<body>
+
+  <div class="icon">
+    <h1 class="logo">ApnaCart</h1>
+</div>
+  <form id="login-form" action="" method="post">
+    <h2>Login</h2>
+    <div class="input-field">
+      <label for="username">Username</label>
+      <input type="text" placeholder="Enter the User Id" id="username" required>
+      <span class="error-message" id="username-error"></span>
+    </div>
+    <div class="input-field">
+      <label for="password">Password</label>
+      <i class="far fa-eye" id="togglePassword"></i>
+      <input type="password" placeholder="Enter the Password" id="password" minlength="8" maxlength="25" required>
+      <span class="error-message" id="password-error"></span>
+    </div>
+    
+    <div class="button">
+      <button type="submit">Login</button><br>
+      <button type="cancel">Cancel</button></div>
+    
+
+    <p class="link"><a href="signup.html">Sign up</a></p>
+    <p class="link2"><a href="forgotpassword">Forgot Password?</a></p>
+    <p class="link3"><a href="neddhelp">Need Help?</a></p>
+
+
+    <input type="checkbox" name="staylogin">
+    <label for="staylogin">Stay Login</label>
+
+    
+  </form>
+
+  <script src="login.js"></script>
+</body>
+</html>
