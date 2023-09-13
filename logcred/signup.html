@@ -10,11 +10,11 @@
     <div class="signup-form">
         <h2>Sign Up</h2>
         <form id="signup-form">
-            <input type="text" id="user id" placeholder="User Id" required>
-            <input type="tel" id="phone" placeholder="Phone Number" maxlength="10" required>
+            <input type="text" id="user id" placeholder="User Id" minlength="3" maxlength="25" required>
+            <input type="tel" id="phone" placeholder="Phone Number" minlength="10" maxlength="10" pattern="[0-9]" required>
             <input type="email" id="email" placeholder="Email" required>
-            <input type="password" id="password" placeholder="Password" minlength="8" required>
-            <input type="password" id="confirm-password" placeholder="Confirm Password" minlength="8" required>
+            <input type="password" id="password" placeholder="Password" minlength="8" maxlength="25" style="text-transform: capitalize;" required>
+            <input type="password" id="confirm-password" placeholder="Confirm Password" minlength="8" maxlength="25" style="text-transform: capitalize;" required>
             <button type="submit">Sign Up</button>
         </form>
     </div>

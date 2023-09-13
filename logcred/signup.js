@@ -3,11 +3,11 @@ document.addEventListener('DOMContentLoaded', function () {
     form.addEventListener('submit', function (event) {
         event.preventDefault();
 
-        const name = document.getElementById('uesr id').value;
+        const name = document.getElementById('name').value;
         const phone = document.getElementById('phone').value;
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
-        const confirmPassword = document.getElementById('confirm-password').value;
+        const Password = document.getElementById('confirm-password').value;
 
         if (password !== confirmPassword) {
             alert('Passwords do not match');

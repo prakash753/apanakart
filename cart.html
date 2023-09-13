@@ -18,7 +18,7 @@ button.margin-right {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Checkout Page Discoveryvip.com</title>
+    <title>Checkout Page </title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
     <style>
         input[type="number"] {
@@ -72,7 +72,7 @@ button.margin-right {
                 var qty = $(this).val();
                 $.each(shopcart, function (index, value) {
                     if (value.id == iteminfo.id) {
-                        if (qty <= 0 || qty>=100) {
+                        if (qty <= 0 || qty>=200) {
                             removeItem = true;
                             itemToDelete = index;
                         }else{
